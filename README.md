@@ -43,3 +43,15 @@ Such that if you have you input files in your host machine, they will be
 available in the directory `/home/test` inside the container, as well as
 output files produced in that dir by running the application inside the container
 they will be available when you exit, in that directory `pwd`.
+
+## License
+
+Apache v2
+
+## Author Information
+
+Mario David: <mariojmdavid@gmail.com>
+
+LIP Lisbon: http://www.lip.pt
+
+Indigo DataCloud: https://www.indigo-datacloud.eu/
