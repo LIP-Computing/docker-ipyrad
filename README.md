@@ -46,7 +46,7 @@ they will be available when you exit, in that directory `pwd`.
 
 ## License
 
-Apache v2
+GNU GPL v3
 
 ## Author Information
 
