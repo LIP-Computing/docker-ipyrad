@@ -5,6 +5,10 @@ Docker to run ipyrad
 Installation and user manual is found here:
 * http://ipyrad.readthedocs.io/index.html
 
+Tags correspond to the version of ipyrad, currently:
+
+* latest: ipyrad 0.7.9
+
 ## Usage
 
 Pull the docker image
