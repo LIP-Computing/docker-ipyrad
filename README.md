@@ -9,7 +9,39 @@ Tags correspond to the version of ipyrad, currently:
 
 * latest: ipyrad 0.7.9
 
-## Usage
+## Usage udocker
+
+udocker is a user client tool to run docker containers without docker.
+It's aimed at running applications in user space without root or admin previledges.
+
+udocker resources can be found in:
+
+* Repository: https://github.com/indigo-dc/udocker
+* Installation manual: https://github.com/indigo-dc/udocker/blob/master/doc/installation_manual.md
+* User manual: https://github.com/indigo-dc/udocker/blob/master/doc/user_manual.md
+* Paper open access: https://doi.org/10.1016/j.cpc.2018.05.021
+
+A summary of using udocker to run ipyrad follows:
+
+    mkdir -p ~/bin
+    curl https://raw.githubusercontent.com/indigo-dc/udocker/master/udocker.py > bin/udocker
+    chmod u+rx bin/udocker
+    udocker install
+    udocker pull lipcomputing/ipyrad:0.7.30
+    udocker create --name=ipyrad lipcomputing/ipyrad:0.7.30
+
+If you are running with multiple threads or processes, OpenMP or OpenMPI, better
+performace is acheived with udocker F mode:
+
+    udocker setup --execmode=F1 ipyrad
+
+If you have input files to pass to the container to run the application, for
+example in `~/input`, you can run:
+
+    udocker run -v  $PWD/input:/home ipyrad ipyrad -n iptest
+
+
+## Usage Docker
 
 Pull the docker image
 
